@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Login from "./pages/Login";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AdminContext } from "./context/AdminContext";
 import NavBar from "./components/NavBar";
-import { Sidebar } from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Dashboard from "./pages/Admin/Dashboard";
@@ -18,7 +18,7 @@ const App = () => {
     <div className="bg-[#F8F9FD]">
       <ToastContainer />
       <NavBar />
-      <div className="flex-items-start">
+      <div className="flex items-start">
         <Sidebar />
         <Routes>
           <Route path="/" element={<></>} />
