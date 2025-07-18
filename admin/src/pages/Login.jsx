@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const { setDToken } = useContext(DoctorContext);
 
-  const { setAtoken, backendUrl } = useContext(AdminContext);
+  const { setAToken, backendUrl } = useContext(AdminContext);
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -23,7 +23,7 @@ const Login = () => {
         });
         if (data.success) {
           localStorage.setItem("aToken", data.token);
-          setAtoken(data.token);
+          setAToken(data.token);
         } else {
           toast.error(data.message);
         }
